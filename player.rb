@@ -21,7 +21,30 @@ def do_battle
   end
 end
 
-def 
+def restart
+  initialize
+end
+
+def level_up
+  @lives += 1
+end
+
+def collect_treasure(coins)
+
+  @gold_coins >= coins
+
+  if @gold_coins >= 10
+    @score += 1
+    @gold_coins -= 10
+  if @score >= 10
+    level_up
+    @score -= 10
+  end
+  end
+end
+
+
+
 
 
 
